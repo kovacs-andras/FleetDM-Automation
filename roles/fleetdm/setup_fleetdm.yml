@@ -76,26 +76,26 @@
     group: fleetdm
     mode: 0640
 
-- name: Copy Fleetdm public cert
-  template:
-    src: '{{ item }}'
-    dest: '/etc/ssl/certs/fleetdm.crt'
-    owner: root
-    group: root
-    mode: 0644
-  with_fileglob:
-    - conf/tls/*.crt
-
-- name: Copy Fleetdm private key
-  template:
-    src: '{{ item }}'
-    dest: '/etc/ssl/private/fleetdm.key'
-    owner: root
-    group: root
-    mode: 0400
-  with_fileglob:
-    - conf/tls/*.key
-
+#- name: Copy Fleetdm public cert
+#  template:
+#    src: '{{ item }}'
+#    dest: '/etc/ssl/certs/fleetdm.crt'
+#    owner: root
+#    group: root
+#    mode: 0644
+#  with_fileglob:
+#    - conf/tls/*.crt
+#
+#- name: Copy Fleetdm private key
+#  template:
+#    src: '{{ item }}'
+#    dest: '/etc/ssl/private/fleetdm.key'
+#    owner: root
+#    group: root
+#    mode: 0400
+#  with_fileglob:
+#    - conf/tls/*.key
+#
 ####################################################################
 # Intialize Fleetdm
 ####################################################################
